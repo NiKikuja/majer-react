@@ -27,7 +27,7 @@
   
   .companyImage {
     width: 100%;
-    height: 200px; /* Dopasuj wysokość zdjęcia */
+    height: 350px; /* Dopasuj wysokość zdjęcia */
     object-fit: cover;
     border-radius: 8px;
   }

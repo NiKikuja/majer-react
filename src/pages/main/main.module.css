@@ -12,4 +12,10 @@
     border-radius: 10px;
     text-align: center;
   }
+  .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333; /* lub inny kolor */
+  }
   

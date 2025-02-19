@@ -1,57 +1,56 @@
 .navbar {
-    width: 100vw; /* Cała szerokość ekranu */
-    height: 100px; /* Trochę większa wysokość */
+    margin: 0 auto; /* Utrzymujemy auto marginesy, aby wyśrodkować navbar */
+    width: 90vw;
+    height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Zachowanie rozstawienia między elementami */
     background-color: #f8f9fa;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
-    padding:0 10px;
+    padding: 0 10px;
     top: 0;
-    left: 0;
+    left:4%;
     z-index: 1000;
-}
-
-/* Większe logo */
-.logo {
-    width: 150px;
-    height: auto;
-}
-
-/* Wyśrodkowane linki */
-.navLinks {
+  }
+  
+  .logo {
+    width: 9%;
+    height: 150%;
+  }
+  
+  .navLinks {
     display: flex;
-    gap: 50px;
+    gap: 60px;
     list-style: none;
     font-size: 22px;
     font-weight: 600;
     padding: 0;
-    margin: 0 auto;
-}
-
-.navLinks li {
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
-}
-
-.navLinks li:hover {
-    color: #007bff;
-}
-
-/* Przycisk "Kontakt" po prawej */
-.contactButton {
+    margin: 0;
+  }
+  .navLinks li {
+    cursor: pointer; /* Zmieniamy kursor na wskaźnik */
+    transition: color 0.3s ease-in-out; /* Płynna zmiana koloru */
+  }
+  
+  .navLinks li:hover {
+    color: #0056b3; /* Zmiana koloru na #0056b3 po najechaniu */
+  }
+  
+  .contactButton {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 15px 20px;
+    padding: 10px 20px;
     font-size: 20px;
     font-weight: 600;
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-}
-
-.contactButton:hover {
+    min-width: 120px; /* Minimalna szerokość przycisku, aby nie rozciągał się za bardzo */
+  }
+  
+  .contactButton:hover {
     background-color: #0056b3;
-}
+  }
+  

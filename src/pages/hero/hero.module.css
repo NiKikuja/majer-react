@@ -1,22 +1,48 @@
 .sliderContainer {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .slider {
-    display: flex;
-    transition: transform 1s ease-in-out; /* Płynne przejście */
-  }
-  
-  .slide {
-    min-width: 100%;
-    height: 70vh; /* Zmniejszenie wysokości o 30% */
-  }
-  
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Dopasowanie zdjęcia do kontenera */
-  }
-  
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top:10px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 1.2s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 60vh;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Pełne zdjęcia bez ucinania */
+}
+
+/* Strzałki nawigacyjne */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.prev:hover, .next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
