@@ -1,56 +1,100 @@
+/* Sekcja Above Nav */
+.abovenav {
+  position: fixed; /* Ustawiamy na fixed, aby sekcja była zawsze na górze */
+  top: 0; /* Ustawiamy na samej górze */
+  right: 0; /* Ustawiamy do prawej krawędzi ekranu */
+  width: 100vw;
+  height: 4vh; /* Zwiększamy wysokość sekcji, aby tekst był wyraźnie widoczny */
+  display: flex;
+  align-items: center; /* Wyrównanie elementów w pionie */
+  justify-content: flex-end; /* Wyrównanie zawartości do prawej strony */
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0 20px; /* Dodatkowy padding dla przestrzeni po prawej */
+  z-index: 1000;
+  opacity: 90%;
+}
+
+/* Styl dla danych kontaktowych */
+.abovenavContent {
+  display: flex; /* Ustawiamy flex, żeby tekst był obok siebie */
+  align-items: center; /* Ustawiamy tekst w jednej linii */
+  flex-direction: row;
+  gap: 40px; /* Odstępy pomiędzy elementami */
+  font-size: 16px; /* Zmniejszamy rozmiar czcionki, aby pasował do sekcji */
+  font-weight: 600;
+  color: #333; /* Kolor tekstu */
+}
+
+/* Styl dla pojedynczych danych kontaktowych */
+.contactInfo {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Efekt hover na danych kontaktowych */
+.contactInfo:hover {
+  color: #0056b3; /* Zmiana koloru przy najechaniu */
+}
+
+
+/* Navbar */
 .navbar {
-    margin: 0 auto; /* Utrzymujemy auto marginesy, aby wyśrodkować navbar */
-    width: 90vw;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Zachowanie rozstawienia między elementami */
-    background-color: #f8f9fa;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    padding: 0 10px;
-    top: 0;
-    left:4%;
-    z-index: 1000;
-  }
-  
-  .logo {
-    width: 9%;
-    height: 150%;
-  }
-  
-  .navLinks {
-    display: flex;
-    gap: 60px;
-    list-style: none;
-    font-size: 22px;
-    font-weight: 600;
-    padding: 0;
-    margin: 0;
-  }
-  .navLinks li {
-    cursor: pointer; /* Zmieniamy kursor na wskaźnik */
-    transition: color 0.3s ease-in-out; /* Płynna zmiana koloru */
-  }
-  
-  .navLinks li:hover {
-    color: #0056b3; /* Zmiana koloru na #0056b3 po najechaniu */
-  }
-  
-  .contactButton {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 20px;
-    font-weight: 600;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    min-width: 120px; /* Minimalna szerokość przycisku, aby nie rozciągał się za bardzo */
-  }
-  
-  .contactButton:hover {
-    background-color: #0056b3;
-  }
-  
+  margin: 0 auto;
+  width: 100vw;
+  height: 9vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  padding: 0 10px;
+  top: 4vh; /* Dodanie przestrzeni pod above nav */
+  left: 0;
+  z-index: 1000;
+  opacity: 90%;
+}
+
+.logo {
+  width: 9%;
+  height: 150%;
+}
+
+.navLinks {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+  font-size: 24px; /* Increased font size */
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+.navLinks li {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  font-size: inherit; /* Ensure the font-size is inherited correctly */
+}
+
+.navLinks li:hover {
+  color: #0056b3;
+}
+
+.contactButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 40px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  min-width: 120px;
+}
+
+.contactButton:hover {
+  background-color: #0056b3;
+}

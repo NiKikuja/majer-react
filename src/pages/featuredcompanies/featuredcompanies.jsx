@@ -12,7 +12,7 @@ const FeaturedCompanies = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.heading}>Nasze Partnerzy</h2>
+      <h2 className={styles.heading}>Nasi Partnerzy</h2>
       <div className={styles.grid}>
         {companyImages.map((image, index) => (
           <div key={index} className={styles.company}>

@@ -1,21 +1,72 @@
 .offersContainer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 0 200px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 5%;
+  border-radius: 16px;
+  background: linear-gradient(90deg, rgba(84, 84, 84, 0.2) 0%, rgba(15, 142, 164, 0.1) 100%);
+}
+
+.offerCard {
+  background: rgba(255, 255, 255, 0.7); 
+  padding: 20px; 
+  border-radius: 20px;
+  text-align: center;
+  width: calc(33.33% - 50px);
+  max-width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  font-size: 1.5rem; /* Increased font size */
+}
+
+.offerCard:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.offerImage {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4rem; /* Increased font size for the heading */
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
   .offerCard {
-    background: #f5f5f5;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+    width: calc(50% - 50px);
+    height: 520px;
   }
-  .heading {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333; /* lub inny kolor */
+}
+
+@media (max-width: 768px) {
+  .offersContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
   }
-  
+
+  .offerCard {
+    width: 100%;
+    height: auto;
+    font-size: 1.8rem; /* Increased font size on small screens */
+  }
+}

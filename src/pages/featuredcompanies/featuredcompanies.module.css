@@ -1,45 +1,62 @@
 .container {
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .heading {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
+  padding: 40px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.company {
+  width: 22%;
+  min-width: 180px;
+  border-radius: 16px; /* Mocniejsze zaokrąglenie */
+  overflow: hidden;
+  background-color: white;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Lepszy efekt głębi */
+  position: relative;
+}
+
+.companyImage {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efekt hover */
+.company:hover {
+  transform: translateY(-8px); /* Unoszenie boxa */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.company:hover .companyImage {
+  transform: scale(1.05); /* Delikatne powiększenie obrazka */
+}
+
+/* Dostosowanie dla urządzeń mobilnych */
+@media (max-width: 768px) {
   .grid {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Aby zdjęcia dobrze się układały na małych ekranach */
+    flex-direction: column;
+    gap: 15px;
   }
-  
+
   .company {
-    width: 22%; /* Można dostosować w zależności od ilości zdjęć */
-    min-width: 150px; /* Minimalna szerokość dla zdjęć */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+    width: 90%;
   }
-  
-  .companyImage {
-    width: 100%;
-    height: 350px; /* Dopasuj wysokość zdjęcia */
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  @media (max-width: 768px) {
-    .grid {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .company {
-      width: 100%;
-    }
-  }
-  
+}
