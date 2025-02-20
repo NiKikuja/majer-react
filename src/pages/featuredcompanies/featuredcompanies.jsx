@@ -3,7 +3,7 @@ import styles from './featuredcompanies.module.css';
 
 // Importowanie zdjęć firm
 import company1 from '../../assets/miniaturka-fimax.jpg';
-import company2 from '../../assets/miniaturka-lotos.jpg';
+import company2 from '../../assets/miniaturka-lotos.png';
 import company3 from '../../assets/pizzeria_marios-xx.jpg';
 import company4 from '../../assets/vic-logo.jpg';
 

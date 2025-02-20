@@ -1,10 +1,30 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;  /* Animacja zmieniająca pozycję nagłówka */
+}
+
+.hidden {
+  transform: translateY(-100%);  /* Chowanie nagłówka poza ekran */
+}
+
+.visible {
+  transform: translateY(0);      /* Pokazywanie nagłówka */
+}
+
+
 /* Sekcja Above Nav */
 .abovenav {
   position: fixed; /* Ustawiamy na fixed, aby sekcja była zawsze na górze */
   top: 0; /* Ustawiamy na samej górze */
   right: 0; /* Ustawiamy do prawej krawędzi ekranu */
   width: 100vw;
-  height: 4vh; /* Zwiększamy wysokość sekcji, aby tekst był wyraźnie widoczny */
+  height: 3vh; /* Zwiększamy wysokość sekcji, aby tekst był wyraźnie widoczny */
   display: flex;
   align-items: center; /* Wyrównanie elementów w pionie */
   justify-content: flex-end; /* Wyrównanie zawartości do prawej strony */
@@ -42,23 +62,23 @@
 .navbar {
   margin: 0 auto;
   width: 100vw;
-  height: 9vh;
+  height: 6vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #f8f9fa;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
   padding: 0 10px;
-  top: 4vh; /* Dodanie przestrzeni pod above nav */
+  top: 3vh; /* Dodanie przestrzeni pod above nav */
   left: 0;
   z-index: 1000;
   opacity: 90%;
 }
 
 .logo {
-  width: 9%;
-  height: 150%;
+  width: 15%;
+  height: 90%;
 }
 
 .navLinks {
@@ -79,22 +99,4 @@
 
 .navLinks li:hover {
   color: #0056b3;
-}
-
-.contactButton {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 0 40px;
-  font-size: 20px;
-  font-weight: 600;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  min-width: 120px;
-}
-
-.contactButton:hover {
-  background-color: #0056b3;
 }

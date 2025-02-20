@@ -1,3 +1,4 @@
+/* main.module.css */
 .offersContainer {
   display: flex;
   justify-content: center;
@@ -5,55 +6,70 @@
   gap: 40px;
   padding: 40px 5%;
   border-radius: 16px;
-  background: linear-gradient(90deg, rgba(84, 84, 84, 0.2) 0%, rgba(15, 142, 164, 0.1) 100%);
 }
 
 .offerCard {
-  background: rgba(255, 255, 255, 0.7); 
-  padding: 20px; 
+  padding: 20px;
   border-radius: 20px;
   text-align: center;
   width: calc(33.33% - 50px);
   max-width: 400px;
-  height: 500px;
+  height: 400px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  border: 2px solid rgba(255, 255, 255, 0.5);
   position: relative;
   overflow: hidden;
-  font-size: 1.5rem; /* Increased font size */
 }
 
 .offerCard:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.offerCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.offerCard:hover::before {
+  opacity: 1;
 }
 
 .offerImage {
-  width: 240px;
-  height: 240px;
+  width: 100%;
+  height: auto;
   object-fit: contain;
   display: block;
-  margin: 0 auto 20px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.offerCard:hover .offerImage {
+  transform: scale(1.1);
 }
 
 .heading {
   text-align: center;
-  font-size: 4rem; /* Increased font size for the heading */
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 40px;
-  color: white;
+  color: #333;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-/* Responsiveness */
 @media (max-width: 1200px) {
   .offerCard {
     width: calc(50% - 50px);
-    height: 520px;
   }
 }
 
@@ -67,6 +83,5 @@
   .offerCard {
     width: 100%;
     height: auto;
-    font-size: 1.8rem; /* Increased font size on small screens */
   }
 }

@@ -1,9 +1,33 @@
-import logo from '../../assets/logo.png';
-import styles from './header.module.css';
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion"; // Importowanie Framer Motion
+import logo from "../../assets/logo.png";
+import styles from "./header.module.css";
 
 const Header = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
+  const threshold = 2; // Ustalamy próg 20px
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY.current + threshold) {
+        setIsVisible(false);  // Chowanie nagłówka po przewinięciu o 20px w dół
+      } else if (window.scrollY < lastScrollY.current - threshold) {
+        setIsVisible(true);   // Pokazywanie nagłówka po przewinięciu o 20px w górę
+      }
+      lastScrollY.current = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div>
+    <motion.div
+      className={styles.header}
+      animate={{ y: isVisible ? 0 : -100 }}  // Ruch nagłówka w górę i w dół
+      transition={{ duration: 0.2, ease: "easeInOut" }}
+    >
       {/* Sekcja Above Nav */}
       <div className={styles.abovenav}>
         <div className={styles.abovenavContent}>
@@ -20,9 +44,8 @@ const Header = () => {
           <li>O nas</li>
           <li>Oferta</li>
         </ul>
-        <button className={styles.contactButton}>Kontakt</button>
       </nav>
-    </div>
+    </motion.div>
   );
 };
 
