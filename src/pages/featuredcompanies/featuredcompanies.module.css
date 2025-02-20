@@ -22,7 +22,7 @@
 
 .company {
   width: 22%;
-  min-width: 180px;
+  min-width: 200px;
   border-radius: 16px; /* Mocniejsze zaokrąglenie */
   overflow: hidden;
   background-color: white;

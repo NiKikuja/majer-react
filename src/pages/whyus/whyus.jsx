@@ -9,12 +9,12 @@ const WhyUs = () => {
           <img src={kafelek1} alt="Opis" />
         </div>
         <div className={styles.text}>
-          <h2>Co wyróżnia Nas od innych firm</h2>
+          <h2>Co wyróżnia Nas od innych firm?</h2>
           <p>Indywidualne podejście do każdego klienta
           Szeroki zakres usług (obsługa „od A do Z”)</p>
           <p>Niskie ceny przy zachowaniu najwyższej jakości
           Indywidualne profesjonalnie przygotowane projekty graficzne</p>
-          <p>Błyskawiczna odpowiedź na każde pytanie
+          <p>Błyskawiczna odpowiedź na każde pytanie.
           Liczne promocje pozwalające na uzyskanie najlepszych nośników reklamowych w najniższych cenach</p>
         </div>
       </div>
@@ -34,7 +34,8 @@ const WhyUs = () => {
         </div>
         <div className={styles.text}>
           <h2>Współpraca z nami to gwarancja sukcesu</h2>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+          <p>Nasza firma to solidny i zaufany partner, który cieszy się uznaniem wśród klientów i współpracujących firm. Zaufali nam tacy liderzy jak Lotos, MKS Lędziny, Fimax i Art-Eco, co świadczy o naszej niezawodności i profesjonalizmie.</p>
+          <p>Działamy zgodnie z najwyższymi standardami, a nasze doświadczenie i długoletnia współpraca z renomowanymi markami to gwarancja, że jesteśmy odpowiedzialnym i godnym zaufania wyborem.</p>
         </div>
       </div>
     </div>

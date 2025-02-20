@@ -32,7 +32,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 0 20px; /* Dodatkowy padding dla przestrzeni po prawej */
   z-index: 1000;
-  opacity: 90%;
 }
 
 /* Styl dla danych kontaktowych */
@@ -48,13 +47,24 @@
 
 /* Styl dla pojedynczych danych kontaktowych */
 .contactInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Odstęp między ikoną a tekstem */
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
 
-/* Efekt hover na danych kontaktowych */
 .contactInfo:hover {
-  color: #0056b3; /* Zmiana koloru przy najechaniu */
+  color: #0056b3;
+}
+
+/* Styl dla ikon w contactInfo */
+.contactInfo .icon {
+  width: 20px;
+  height: 20px;
 }
 
 
@@ -69,16 +79,15 @@
   background-color: #f8f9fa;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
-  padding: 0 10px;
   top: 3vh; /* Dodanie przestrzeni pod above nav */
-  left: 0;
   z-index: 1000;
-  opacity: 90%;
+
 }
 
 .logo {
-  width: 15%;
+  width: 12%;
   height: 90%;
+  margin-right: 50%;
 }
 
 .navLinks {

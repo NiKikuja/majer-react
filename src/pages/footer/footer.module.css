@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
-  background: #222;
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   font-family: Arial, sans-serif;
   flex-wrap: wrap;
@@ -20,7 +20,7 @@
   width: 48%;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .footerBottomText {
@@ -31,7 +31,7 @@
 
 .footerBox {
   padding: 10px;
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
 }
 

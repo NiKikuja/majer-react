@@ -46,7 +46,6 @@ function Footer() {
             </div>
             <div className={styles.footerBottomText}>
                 <p>&copy; 2025 Twoja Firma. Wszelkie prawa zastrzeżone.</p>
-                <p>Kontakt: kontakt@twojafirma.pl</p>
             </div>
         </footer>
     );

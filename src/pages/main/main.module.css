@@ -4,7 +4,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
-  padding: 40px 5%;
+  padding: 20px 5%;
   border-radius: 16px;
 }
 
@@ -17,7 +17,7 @@
   height: 400px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
   border: 2px solid rgba(255, 255, 255, 0.5);
   position: relative;
@@ -58,13 +58,13 @@
 }
 
 .heading {
-  text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 40px;
-  color: #333;
+  margin-bottom: 30px;
+  color: #222;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
+  text-align: center;
 }
 
 @media (max-width: 1200px) {

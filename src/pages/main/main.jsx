@@ -12,7 +12,7 @@ const offers = [kafelek0, kafelek1, kafelek2, kafelek3, kafelek4, kafelek5];
 const Main = () => {
   return (
     <div>
-      <h1 className={styles.heading}>Nasza Oferta</h1>
+      <h1 className={styles.heading}>Między innymi oferujemy:</h1>
       <div className={styles.offersContainer}>
         {offers.map((img, index) => (
           <div key={index} className={styles.offerCard}>

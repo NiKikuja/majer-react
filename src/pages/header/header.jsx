@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion"; // Importowanie Framer Motion
 import logo from "../../assets/logo.png";
+import { MdEmail, MdPhone } from "react-icons/md"; // Dodanie ikony telefonu
 import styles from "./header.module.css";
 
 const Header = () => {
@@ -31,8 +32,12 @@ const Header = () => {
       {/* Sekcja Above Nav */}
       <div className={styles.abovenav}>
         <div className={styles.abovenavContent}>
-          <span className={styles.contactInfo}>Email: kontakt@firma.pl</span>
-          <span className={styles.contactInfo}>Telefon: 123 456 789</span>
+          <span className={styles.contactInfo}>
+            <MdEmail className={styles.icon} size={20} /> wojciech@reklama-letdom.pl
+          </span>
+          <span className={styles.contactInfo}>
+            <MdPhone className={styles.icon} size={20} /> 606 480 482
+          </span>
         </div>
       </div>
 
