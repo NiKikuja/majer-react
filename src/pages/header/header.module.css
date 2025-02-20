@@ -88,6 +88,7 @@
   width: 12%;
   height: 90%;
   margin-right: 50%;
+  transform: translateY(-30%);
 }
 
 .navLinks {
@@ -127,9 +128,19 @@
       width: 55%;
       margin-right:10%;
       margin-left:-10%;
+      transform: translateY(0);
     }
   }
-  
+  @media (max-width: 768px) {
+    .abovenavContent {
+      font-size: clamp(12px, 3vw, 16px);
+      margin: auto;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+    }
+  }
 
   .navLinks {
     display: none;
@@ -142,9 +153,11 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 15px;
+
   }
 
   .navLinks.open {
-    display: flex;
+      display: flex;
+
   }
 }

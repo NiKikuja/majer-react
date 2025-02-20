@@ -11,16 +11,17 @@ const offers = [kafelek0, kafelek1, kafelek2, kafelek3, kafelek4, kafelek5];
 
 const Main = () => {
   return (
-    <div>
+    <div className={styles.maincont}>
       <h1 className={styles.heading}>Między innymi oferujemy:</h1>
       <div className={styles.offersContainer}>
-        {offers.map((img, index) => (
-          <div key={index} className={styles.offerCard}>
-            <img src={img} alt={`Oferta ${index + 1}`} className={styles.offerImage} />
-          </div>
-        ))}
+        
+          {offers.map((img, index) => (
+            <div key={index} className={styles.offerCard}>
+              <img src={img} alt={`Oferta ${index + 1}`} className={styles.offerImage} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
   );
 };
 

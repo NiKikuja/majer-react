@@ -45,7 +45,7 @@ function Footer() {
                 ></iframe>
             </div>
             <div className={styles.footerBottomText}>
-                <p>&copy; 2025 Twoja Firma. Wszelkie prawa zastrzeżone.</p>
+                <p>&copy; 2025 LET-DOM. Wszelkie prawa zastrzeżone.</p>
             </div>
         </footer>
     );

@@ -1,4 +1,7 @@
-/* main.module.css */
+/* main.module.css */ 
+.maincont {
+  width:100%;
+}
 .offersContainer {
   display: flex;
   justify-content: center;
@@ -12,9 +15,9 @@
   padding: 20px;
   border-radius: 20px;
   text-align: center;
-  width: calc(33.33% - 50px);
+  width: calc(33.33% - 40px);
   max-width: 400px;
-  height: 400px;
+  height: auto;
   display: flex;
   flex-direction: column;
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
@@ -69,7 +72,7 @@
 
 @media (max-width: 1200px) {
   .offerCard {
-    width: calc(50% - 50px);
+    width: calc(50% - 40px);
   }
 }
 
@@ -77,12 +80,17 @@
   .offersContainer {
     flex-direction: column;
     align-items: center;
-    padding: 30px;
-    margin:auto;
+    margin: auto;
   }
+  .offerCard {
+    width: 90%;
+    max-width: 350px;
+  }
+}
 
+@media (max-width: 480px) {
   .offerCard {
     width: 100%;
-    height: auto;
+    max-width: 300px;
   }
 }

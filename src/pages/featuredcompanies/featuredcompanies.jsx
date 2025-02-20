@@ -5,7 +5,7 @@ import styles from './featuredcompanies.module.css';
 import company1 from '../../assets/miniaturka-fimax.jpg';
 import company2 from '../../assets/miniaturka-lotos.png';
 import company3 from '../../assets/pizzeria_marios-xx.jpg';
-import company4 from '../../assets/vic-logo.jpg';
+import company4 from '../../assets/arteco.png';
 
 const FeaturedCompanies = () => {
   const companyImages = [company1, company2, company3, company4];

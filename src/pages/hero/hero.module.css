@@ -1,6 +1,6 @@
 .sliderContainer {
   position: relative;
-  width: 99.1vw; /* Pełna szerokość ekranu */
+  width: 100%; /* Pełna szerokość ekranu */
   height: 60vh;
   overflow: hidden;
   margin-top: 9vh;

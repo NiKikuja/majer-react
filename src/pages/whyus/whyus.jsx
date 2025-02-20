@@ -1,5 +1,7 @@
 import styles from './whyus.module.css';
-import kafelek1 from '../../assets/miniaturka-lotos.png';
+import kafelek1 from '../../assets/lotos 1.png';
+import kafelek2 from '../../assets/lotos 2.png';
+import kafelek3 from '../../assets/lotos 3.png';
 
 const WhyUs = () => {
   return (
@@ -25,12 +27,12 @@ const WhyUs = () => {
           <p>Bogate portfolio udowadnia że dostarczamy efektywne rozwiązania dla każdego typu klientów zarówno mikro przedsiębiorstw rozpoczynających swoją działalność jak i potężnych korporacji poszukujących innowacyjnych rozwiązań, które przyniosą świeży powiew ich zasłużonym markom.</p>
         </div>
         <div className={styles.img}>
-          <img src={kafelek1} alt="Opis" />
+          <img src={kafelek2} alt="Opis" />
         </div>
       </div>
       <div className={styles.row}>
         <div className={styles.img}>
-          <img src={kafelek1} alt="Opis" />
+          <img src={kafelek3} alt="Opis" />
         </div>
         <div className={styles.text}>
           <h2>Współpraca z nami to gwarancja sukcesu</h2>
