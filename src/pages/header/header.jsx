@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { MdEmail, MdPhone, MdMenu, MdClose } from "react-icons/md";
 import logo from "../../assets/logo.png";
@@ -47,9 +48,9 @@ const Header = () => {
           {menuOpen ? <MdClose size={30} /> : <MdMenu size={30} />}
         </button>
         <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
-          <li>Strona główna</li>
-          <li>O nas</li>
-          <li>Oferta</li>
+          <li><NavLink to="/" className={({ isActive }) => isActive ? styles.active : ""}>Strona główna</NavLink></li>
+          <li><NavLink to="/o-nas" className={({ isActive }) => isActive ? styles.active : ""}>O nas</NavLink></li>
+          <li><NavLink to="/oferta" className={({ isActive }) => isActive ? styles.active : ""}>Oferta</NavLink></li>
         </ul>
       </nav>
     </motion.div>
