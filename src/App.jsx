@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import Header from "./pages/header/header.jsx";
 import Hero from "./pages/hero/hero.jsx";
@@ -6,8 +6,9 @@ import FeaComp from "./pages/featuredcompanies/featuredcompanies.jsx";
 import Main from "./pages/main/main.jsx";
 import Footer from "./pages/footer/footer.jsx";
 import Whyus from "./pages/whyus/whyus.jsx";
-import Oferta from "./pages/oferta/oferta.jsx"; // Import strony oferta
-import Onas from "./pages/onas/onas.jsx"; // Import strony onas
+import Oferta from "./pages/oferta/oferta.jsx";
+import Onas from "./pages/onas/onas.jsx";
+import ProductPage from "./pages/product/ProductPage.jsx";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         } />
         <Route path="/onas" element={<Onas />} />
         <Route path="/oferta" element={<Oferta />} />
+        <Route path="/produkt/:id" element={<ProductPage />} />
+        {/* Jeśli użytkownik wejdzie na nieznaną stronę, przekieruj go na stronę główną */}
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
     </Router>

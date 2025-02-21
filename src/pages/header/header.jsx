@@ -49,7 +49,7 @@ const Header = () => {
         </button>
         <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
           <li><NavLink to="/" className={({ isActive }) => isActive ? styles.active : ""}>Strona główna</NavLink></li>
-          <li><NavLink to="/o-nas" className={({ isActive }) => isActive ? styles.active : ""}>O nas</NavLink></li>
+          <li><NavLink to="/onas" className={({ isActive }) => isActive ? styles.active : ""}>O nas</NavLink></li>
           <li><NavLink to="/oferta" className={({ isActive }) => isActive ? styles.active : ""}>Oferta</NavLink></li>
         </ul>
       </nav>
