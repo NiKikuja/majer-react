@@ -92,14 +92,53 @@ const pricingData = {
       ],
     },
   },
+  "Usługi graficzne": {
+    "Opcja Standard": [
+      {
+        "description": `2 różne propozycje logo\nczas wykonania 48 godzin\nDo 3 poprawek wybranego logotypu\nlogo w formatach (jpg, png)\nwersje kolorystyczne znaku: kolor, czarno-białe,\nlogo w wersjach nadających się do druku i internetu (CMYK, RGB)\nprojekt przekazany przez e-mail`,
+        "priceNet": 100
+      }
+    ],
+    "Opcja High": [
+      {
+        "description": `4 różnych propozycji logo\npierwsze projekty w ciągu 48 godzin\nlogo w formatach (cdr, jpg, tiff, png)\nprzekazanie praw autorskich do logotypu\nopis kolorystyki loga w pliku PDF\nwersje kolorystyczne znaku: kolor, czarno-białe, kontra\nlogo w wersjach nadających się do druku i internetu (CMYK, RGB)\nprojekt przekazany przez e-mail`,
+        "priceNet": 200
+      }
+    ],
+    "Opcja Biznes": [
+      {
+        "description": `5 różnych propozycji logo\npierwsze projekty w ciągu 48 godzin\nlogo w formatach (cdr, psd, ai, png, jpg, png)\nprzekazanie praw autorskich do logotypu\nopis kolorystyki loga w pliku PDF\nwersje kolorystyczne znaku: kolor, czarno-białe\nlogo w wersjach nadających się do druku i internetu (CMYK, RGB)\nprojekt przekazany przez e-mail\nZniżka na inne usługi 5%`,
+        "priceNet": 375
+      }
+    ],
+    "Redesign obecnego znaku": [
+      {
+        "description": `Oferujemy również opcję odświeżenia swojego obecnego logo, cena za taką usługę zazwyczaj mieści się w koszcie 200zł.`,
+        "priceNet": 200
+      }
+    ],
+    "Projekty materiałów reklamowych": {
+      "Ulotka jednostronna": { "priceNet": 85 },
+      "Ulotka dwustronna": { "priceNet": 120 },
+      "Wizytówka dwustronna": { "priceNet": 80 },
+      "Plakat": { "priceNet": 90 },
+      "Notesy": { "priceNet": 100 },
+      "Teczki ofertowe": { "priceNet": 150 },
+      "Baner reklamowy": { "priceNet": 100 },
+      "Etykiety/zawieszki": { "priceNet": 100 },
+      "Kalendarz reklamowy": { "priceNet": 100 },
+      "Roll up": { "priceNet": 80 }
+    }
+  }
 };
+
 
 const calculateBrutto = (netto) => (netto * 1.23).toFixed(2);
 
 const ProductPage = () => {
   const { id } = useParams();
   const product = oferty.find((item) => item.id === Number(id));
-
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -110,21 +149,32 @@ const ProductPage = () => {
   const [selectedPriceNet, setSelectedPriceNet] = useState(0);
   const [format, setFormat] = useState("A6");
   const [weight, setWeight] = useState("130g");
+  const [service, setService] = useState("");
+  const [serviceDescription, setServiceDescription] = useState("");
 
   useEffect(() => {
+    if (!product) return;
     let price = 0;
-    if (product.title === "Banery reklamowe") {
+    if (product.title === "Banery reklamowe" && pricingData.Banery) {
       const selectedMaterial = pricingData.Banery.find((item) => item.material === material);
       price = selectedMaterial ? selectedMaterial.priceNet : 0;
-    } else if (product.title === "Wizytówki") {
+    } else if (product.title === "Wizytówki" && pricingData.Wizytówki) {
       const selectedOption = pricingData.Wizytówki[coating]?.find((item) => item.quantity === quantity);
       price = selectedOption ? selectedOption.priceNet : 0;
-    } else if (product.title === "Ulotki") {
+    } else if (product.title === "Ulotki" && pricingData.Ulotki) {
       const selectedOption = pricingData.Ulotki[format]?.[weight]?.find((item) => item.quantity === quantity);
       price = selectedOption ? selectedOption.priceNet : 0;
+    } else if (product.title === "Usługi graficzne" && pricingData["Usługi graficzne"]) {
+      const selectedService = pricingData["Usługi graficzne"][service]?.[0];
+      price = selectedService ? selectedService.priceNet : 0;
+      setServiceDescription(selectedService ? selectedService.description : "");
     }
     setSelectedPriceNet(price);
-  }, [material, coating, quantity, product.title, format, weight]);
+  }, [material, coating, quantity, product, format, weight, service]);
+  
+  if (!product) {
+    return <p>Produkt nie znaleziony.</p>;
+  }
 
   return (
     <div className={styles.container}>
@@ -133,7 +183,7 @@ const ProductPage = () => {
         <div className={styles.details}>
           <h1 className={styles.title}>{product.title}</h1>
           <p className={styles.description}>{product.description}</p>
-          {product.title === "Banery reklamowe" && (
+          {product.title === "Banery reklamowe" && pricingData.Banery && (
             <>
               <label><br/><br/>Wybierz materiał:</label>
               <select value={material} onChange={(e) => setMaterial(e.target.value)}>
@@ -143,7 +193,7 @@ const ProductPage = () => {
               </select>
             </>
           )}
-          {product.title === "Wizytówki" && (
+          {product.title === "Wizytówki" && pricingData.Wizytówki && (
             <>
               <label><br/><br/>Rodzaj:</label>
               <select value={coating} onChange={(e) => setCoating(e.target.value)}>
@@ -159,7 +209,7 @@ const ProductPage = () => {
               </select>
             </>
           )}
-          {product.title === "Ulotki" && (
+          {product.title === "Ulotki" && pricingData.Ulotki && (
             <>
               <label><br/>Format:</label>
               <select value={format} onChange={(e) => setFormat(e.target.value)}>
@@ -179,6 +229,22 @@ const ProductPage = () => {
                   <option key={index} value={item.quantity}>{item.quantity} szt.</option>
                 ))}
               </select>
+            </>
+          )}
+          {product.title === "Usługi graficzne" && pricingData["Usługi graficzne"] && (
+            <>
+              <label><br/><br/>Wybierz usługę:</label>
+              <select value={service} onChange={(e) => setService(e.target.value)}>
+                {Object.keys(pricingData["Usługi graficzne"]).map((key, index) => (
+                  <option key={index} value={key}>{key}</option>
+                ))}
+              </select>
+              {serviceDescription && (
+                <div className={styles.serviceDescription}>
+                  <h3>Opis usługi:</h3>
+                  <p>{serviceDescription}</p>
+                </div>
+              )}
             </>
           )}
           <p className={styles.price}><br/>Cena netto: <strong>{selectedPriceNet.toFixed(2)} zł</strong></p>

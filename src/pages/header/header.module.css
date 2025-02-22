@@ -85,9 +85,9 @@
 
 .navLinks {
   display: flex;
-  gap: 60px;
+  gap: 20px;
   list-style: none;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   padding: 0;
   margin: 0;
