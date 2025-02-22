@@ -43,7 +43,10 @@ const Header = () => {
       </div>
 
       <nav className={styles.navbar}>
-        <img src={logo} alt="Logo" className={styles.logo} />
+        <NavLink to="/" className={styles.logoLink}>
+          <img src={logo} alt="Logo" className={styles.logo} />
+        </NavLink>
+
         <button className={styles.menuButton} onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <MdClose size={30} /> : <MdMenu size={30} />}
         </button>
