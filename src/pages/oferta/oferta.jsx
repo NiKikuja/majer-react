@@ -8,7 +8,7 @@ import kafelek4 from "../../assets/kafelek5.png";
 import kafelek5 from "../../assets/kafelek6.png";
 
 const oferty = [
-  { id: 1, title: "Ulotki", price: "Od 200 zł", description: "Projektowanie i drukowanie ulotek dostosowanych do Twojej marki.", 
+  { id: 1, title: "Ulotki", price: "Od 100 zł", description: "Projektowanie i drukowanie ulotek dostosowanych do Twojej marki.", 
     features: ["Druk cyfrowy i offsetowy", "Różne formaty i gramatury papieru", "Projekt graficzny w cenie", "Możliwość uszlachetnienia (lakier UV, foliowanie)"], 
     fullDescription: `<strong>Ulotki cięte</strong> to jedno z <strong>najskuteczniejszych narzędzi marketingowych</strong>, które pozwala dotrzeć do szerokiego grona odbiorców w sposób <strong>prosty, a zarazem efektywny</strong>.<br/><br/>
 
@@ -30,7 +30,7 @@ Dzięki <strong>elastycznym opcjom personalizacji</strong>, nasze ulotki pozwala
 ,
     image: kafelek0 },
 
-  { id: 2, title: "Banery reklamowe", price: "Od 150 zł/m²", description: "Drukujemy i projektujemy banery reklamowe odporne na warunki atmosferyczne.", 
+  { id: 2, title: "Banery reklamowe", price: "Od 30 zł/m²", description: "Drukujemy i projektujemy banery reklamowe odporne na warunki atmosferyczne.", 
     features: ["Druk na materiale odpornym na UV i wodę", "Wzmocnione krawędzie i oczka montażowe", "Możliwość projektowania wielkoformatowego", "Dostawa na terenie całej Polski"], 
     fullDescription: `<strong>Oferujemy wysokiej jakości banery reklamowe</strong>, które doskonale sprawdzą się w każdej kampanii promocyjnej.<br/><br/>
 <strong>Banery Standard (510 g/m²)</strong> to ekonomiczne rozwiązanie, idealne do krótkoterminowych kampanii. Wysoka jakość bieli oraz solidna konstrukcja z włóknami 500x500 gwarantują świetną widoczność i trwałość, a ich cena sprawia, że są popularnym wyborem dla firm szukających efektywnego rozwiązania w rozsądnej cenie.<br/>
@@ -40,7 +40,7 @@ Dzięki <strong>elastycznym opcjom personalizacji</strong>, nasze ulotki pozwala
 Nasze banery reklamowe charakteryzują się doskonałą jakością druku, są odporne na warunki atmosferyczne, promieniowanie UV i idealnie sprawdzą się w każdej kampanii reklamowej. Dzięki solidnej konstrukcji i szerokiemu wyborowi materiałów, z łatwością dopasujesz je do swoich potrzeb. Zainwestuj w profesjonalne rozwiązania reklamowe, które przyciągną uwagę Twoich klientów!`,
     image: kafelek1 },
 
-  { id: 3, title: "Wizytówki", price: "Od 100 zł/100 szt.", description: "Profesjonalne wizytówki dla Twojej firmy z unikalnym designem.", 
+  { id: 3, title: "Wizytówki", price: "Od 80 zł/100 szt.", description: "Profesjonalne wizytówki dla Twojej firmy z unikalnym designem.", 
     features: ["Różne rodzaje papieru (matowy, błyszczący, kraft)", "Możliwość złocenia i tłoczenia", "Dwustronny nadruk bez dopłaty", "Szybka realizacja zamówień"], 
     fullDescription: `<strong>Nasze klasyczne wizytówki</strong> to doskonała kombinacja elegancji i profesjonalizmu.<br/><br/>
 <strong>Dostępne opcje uszlachetnienia:</strong><br/>
@@ -68,7 +68,7 @@ Pamiętaj, że wizytówka to nie tylko sposób na przekazanie danych kontaktowyc
     ,
     image: kafelek3 },
 
-  { id: 5, title: "Odzież reklamowa", price: "Od 50 zł/szt.", description: "Koszulki, bluzy i inne ubrania z nadrukiem lub haftem firmowym.", 
+  { id: 5, title: "Odzież reklamowa", price: "Cena zależna od zamówienia", description: "Koszulki, bluzy i inne ubrania z nadrukiem lub haftem firmowym.", 
     features: ["Personalizowane nadruki i hafty", "Dostępność różnych materiałów i fasonów", "Odzież robocza i reklamowa", "Odporność na pranie i długotrwałe użytkowanie"], 
     fullDescription: `<strong>Odzież reklamowa</strong> to skuteczny sposób na <strong>promocję Twojej marki</strong> w codziennym życiu.<br/><br/>
 
@@ -95,7 +95,7 @@ Oferujemy <strong>szeroki wybór ubrań</strong>, które można spersonalizować
 ,
     image: kafelek4 },
 
-  { id: 6, title: "Usługi graficzne", price: "Wyceniane indywidualnie", description: "Profesjonalne projekty graficzne dla firm i osób prywatnych.", 
+  { id: 6, title: "Usługi graficzne", price: "Cena zależna od zamówienia", description: "Profesjonalne projekty graficzne dla firm i osób prywatnych.", 
     features: ["Logotypy, identyfikacja wizualna", "Projekty materiałów drukowanych i internetowych", "Indywidualne podejście do każdego klienta", "Wysoka jakość i nowoczesny design"], 
     fullDescription: `<strong>Usługi graficzne</strong> to fundament <strong>skutecznej i spójnej komunikacji wizualnej</strong> Twojej marki.<br/><br/>
 

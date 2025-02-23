@@ -21,6 +21,12 @@
     padding: 30px;
     align-items: center;
     gap: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .image {
@@ -29,76 +35,82 @@
     height: auto;
     object-fit: cover;
     border-right: 3px solid #ddd;
+    border-radius: 10px;
 }
 
 .details {
     flex: 1;
     padding: 30px;
     text-align: center;
+    border-radius: 10px;
 }
 
 .title {
-    font-size: 28px;
+    font-size: 30px;
+    font-weight: bold;
     margin-bottom: 15px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .description {
     font-size: 18px;
     margin-bottom: 15px;
     color: #555;
+    font-style: italic;
 }
 
-.features {
-    list-style: none;
-    padding: 0;
-    font-size: 16px;
-}
-
-.features li {
-    margin-bottom: 8px;
-}
-
-.priceContainer {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #007bff;
 }
 
 .input, select {
     width: 100%;
     max-width: 250px;
-    padding: 10px;
+    padding: 12px;
     font-size: 18px;
     border: 2px solid #ccc;
     border-radius: 8px;
     text-align: center;
-    transition: all 0.3s ease-in-out;
     background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .input:focus, select:focus {
     border-color: #007bff;
     box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.4);
     outline: none;
+    background-color: #fff;
+}
+
+.input:hover, select:hover {
+    border-color: #0056b3;
 }
 
 select {
-    appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23007bff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 18px;
-    padding-right: 35px;
+    width: 300px; /* Możesz dostosować szerokość */
+    max-width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.label {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.4);
+    outline: none;
+    background-color: #fff;
 }
 
 .fullDescription {
@@ -119,6 +131,7 @@ select {
     color: #007bff;
     margin-bottom: 15px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .fullDescription p {
@@ -156,7 +169,7 @@ select {
 
 @media (max-width: 768px) {
     .title {
-        font-size: 24px;
+        font-size: 26px;
     }
     .description, .features li {
         font-size: 16px;
@@ -183,4 +196,34 @@ select {
         font-size: 16px;
         padding: 8px;
     }
+}
+.inputcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.labelsquare {
+    color: #333;
+}
+
+.inputsquare {
+    width: 150px; /* Powiększenie szerokości */
+    height: 10px; /* Powiększenie wysokości */
+    padding: 10px;
+    font-size: 20px; /* Większy tekst w polu */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    background-color: #f9f9f9;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.inputsquare:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.4);
+    outline: none;
+    background-color: white;
 }
