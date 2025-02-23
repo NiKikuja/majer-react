@@ -5,10 +5,10 @@ import { oferty } from "../oferta/oferta";
 
 const pricingData = {
   "Banery": [
-    { material: "ECO laminowy", size: "500x500", priceNet: 31 },
-    { material: "STRONG laminowy", size: "1000x1000", priceNet: 34 },
+    { material: "Baner Standard", size: "500x500", priceNet: 31 },
+    { material: "Baner STRONG laminowy", size: "1000x1000", priceNet: 34 },
     { material: "Siatka MESH", size: "Siatka Mesh", priceNet: 31 },
-    { material: "VIP powlekany", size: "Baner Exclusive", priceNet: 48 },
+    { material: "Banery Exclusive", size: "Baner Exclusive", priceNet: 48 },
   ],
   "Wizytówki": {
     "Bez folii": [
@@ -93,19 +93,19 @@ const pricingData = {
     },
   },
   "Usługi graficzne": {
-    "Opcja Standard": [
+    "Logo Standard": [
       {
         "description": `2 różne propozycje logo\nczas wykonania 48 godzin\nDo 3 poprawek wybranego logotypu\nlogo w formatach (jpg, png)\nwersje kolorystyczne znaku: kolor, czarno-białe,\nlogo w wersjach nadających się do druku i internetu (CMYK, RGB)\nprojekt przekazany przez e-mail`,
         "priceNet": 130
       }
     ],
-    "Opcja High": [
+    "Logo High": [
       {
         "description": `4 różnych propozycji logo\npierwsze projekty w ciągu 48 godzin\nlogo w formatach (cdr, jpg, tiff, png)\nprzekazanie praw autorskich do logotypu\nopis kolorystyki loga w pliku PDF\nwersje kolorystyczne znaku: kolor, czarno-białe, kontra\nlogo w wersjach nadających się do druku i internetu (CMYK, RGB)\nprojekt przekazany przez e-mail`,
         "priceNet": 230
       }
     ],
-    "Opcja Biznes": [
+    "Logo Biznes": [
       {
         "description": `5 różnych propozycji logo\npierwsze projekty w ciągu 48 godzin\nlogo w formatach (cdr, psd, ai, png, jpg, png)\nprzekazanie praw autorskich do logotypu\nopis kolorystyki loga w pliku PDF\nwersje kolorystyczne znaku: kolor, czarno-białe\nlogo w wersjach nadających się do druku i internetu (CMYK, RGB)\nprojekt przekazany przez e-mail\nZniżka na inne usługi 5%`,
         "priceNet": 405
@@ -113,7 +113,7 @@ const pricingData = {
     ],
     "Redesign obecnego znaku": [
       {
-        "description": `Oferujemy również opcję odświeżenia swojego obecnego logo, cena za taką usługę zazwyczaj mieści się w koszcie 200zł.`,
+        "description": `Oferujemy również opcję odświeżenia swojego obecnego logo, cena za taką usługę zazwyczaj mieści się w koszcie 230zł.`,
         "priceNet": 230
       }
     ],

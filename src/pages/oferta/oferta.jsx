@@ -34,7 +34,7 @@ Dzięki <strong>elastycznym opcjom personalizacji</strong>, nasze ulotki pozwala
     features: ["Druk na materiale odpornym na UV i wodę", "Wzmocnione krawędzie i oczka montażowe", "Możliwość projektowania wielkoformatowego", "Dostawa na terenie całej Polski"], 
     fullDescription: `<strong>Oferujemy wysokiej jakości banery reklamowe</strong>, które doskonale sprawdzą się w każdej kampanii promocyjnej.<br/><br/>
 <strong>Banery Standard (510 g/m²)</strong> to ekonomiczne rozwiązanie, idealne do krótkoterminowych kampanii. Wysoka jakość bieli oraz solidna konstrukcja z włóknami 500x500 gwarantują świetną widoczność i trwałość, a ich cena sprawia, że są popularnym wyborem dla firm szukających efektywnego rozwiązania w rozsądnej cenie.<br/>
-<strong>Banery STRONG laminowy (510 g/m²)</strong> oferują jeszcze większą odporność dzięki wzmocnionym włóknom 1000x1000, co sprawia, że idealnie nadają się do długotrwałych ekspozycji zewnętrznych. Są odporne na uszkodzenia mechaniczne, warunki atmosferyczne i promieniowanie UV.
+<strong>Banery STRONG laminowy (510 g/m²)</strong> oferują jeszcze większą odporność dzięki wzmocnionym włóknom 1000x1000, co sprawia, że idealnie nadają się do długotrwałych ekspozycji zewnętrznych. Są odporne na uszkodzenia mechaniczne, warunki atmosferyczne i promieniowanie UV.<br/>
 <strong>Banery Exclusive (510 g/m²)</strong> to najwyższa klasa produktów reklamowych. Dzięki matowej powierzchni eliminują odbicia światła, zapewniając doskonałą czytelność treści w każdych warunkach oświetleniowych. Wysokiej jakości biel oraz mocna konstrukcja z włóknami 1000x1000 sprawiają, że są idealne do prestiżowych kampanii reklamowych.<br/>
 <strong>Siatka MESH (270 g/m²)</strong> to doskonałe rozwiązanie na duże powierzchnie reklamowe. Dzięki perforowanej strukturze materiału, pozwala na przepuszczanie powietrza i światła, jednocześnie zapewniając doskonałą widoczność grafiki. Jest odporna na działanie wiatru, co czyni ją niezawodną w trudnych warunkach zewnętrznych.<br/><br/>
 Nasze banery reklamowe charakteryzują się doskonałą jakością druku, są odporne na warunki atmosferyczne, promieniowanie UV i idealnie sprawdzą się w każdej kampanii reklamowej. Dzięki solidnej konstrukcji i szerokiemu wyborowi materiałów, z łatwością dopasujesz je do swoich potrzeb. Zainwestuj w profesjonalne rozwiązania reklamowe, które przyciągną uwagę Twoich klientów!`,
@@ -53,7 +53,7 @@ Pamiętaj, że wizytówka to nie tylko sposób na przekazanie danych kontaktowyc
 `,
     image: kafelek2 },
 
-  { id: 4, title: "Gadżety reklamowe", price: "Cena zależna od zamówienia", description: "Personalizowane gadżety reklamowe z nadrukiem Twojej firmy.", 
+  { id: 4, title: "Gadżety reklamowe", price: "Do wyceny indywidualnej", description: "Personalizowane gadżety reklamowe z nadrukiem Twojej firmy.", 
     features: ["Kubki, długopisy, smycze, pendrive'y i więcej", "Nadruk tampodruk, sitodruk, grawer laserowy", "Możliwość zamówienia od małych ilości", "Doskonała jakość i trwałość nadruku"], 
     fullDescription: `<strong>Gadżety reklamowe</strong> to doskonały sposób na <strong>promocję Twojej marki</strong> w sposób <strong>kreatywny i funkcjonalny</strong>.<br/><br/>
 
@@ -68,7 +68,7 @@ Pamiętaj, że wizytówka to nie tylko sposób na przekazanie danych kontaktowyc
     ,
     image: kafelek3 },
 
-  { id: 5, title: "Odzież reklamowa", price: "Cena zależna od zamówienia", description: "Koszulki, bluzy i inne ubrania z nadrukiem lub haftem firmowym.", 
+  { id: 5, title: "Odzież reklamowa", price: "Do wyceny indywidualnej", description: "Koszulki, bluzy i inne ubrania z nadrukiem lub haftem firmowym.", 
     features: ["Personalizowane nadruki i hafty", "Dostępność różnych materiałów i fasonów", "Odzież robocza i reklamowa", "Odporność na pranie i długotrwałe użytkowanie"], 
     fullDescription: `<strong>Odzież reklamowa</strong> to skuteczny sposób na <strong>promocję Twojej marki</strong> w codziennym życiu.<br/><br/>
 

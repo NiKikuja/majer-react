@@ -9,7 +9,7 @@ const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const lastScrollY = useRef(0);
-  const threshold = 2;
+  const threshold = 10;
 
   useEffect(() => {
     const handleScroll = () => {
