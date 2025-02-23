@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { MdEmail, MdPhone, MdMenu, MdClose } from "react-icons/md";
 import logo from "../../assets/logo.png";
 import styles from "./header.module.css";
@@ -47,14 +47,36 @@ const Header = () => {
           <img src={logo} alt="Logo" className={styles.logo} />
         </NavLink>
 
-        <button className={styles.menuButton} onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <MdClose size={30} /> : <MdMenu size={30} />}
-        </button>
-        <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
+        <ul className={styles.navLinks}>
           <li><NavLink to="/" className={({ isActive }) => isActive ? styles.active : ""}>Strona główna</NavLink></li>
           <li><NavLink to="/onas" className={({ isActive }) => isActive ? styles.active : ""}>O nas</NavLink></li>
           <li><NavLink to="/oferta" className={({ isActive }) => isActive ? styles.active : ""}>Oferta</NavLink></li>
         </ul>
+
+        <button className={styles.menuButton} onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <MdClose size={30} /> : <MdMenu size={30} />}
+        </button>
+
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              className={styles.fullscreenMenu}
+              initial={{ opacity: 0, y: "-100%" }}
+              animate={{ opacity: 1, y: "0%" }}
+              exit={{ opacity: 0, y: "-100%" }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+            >
+              <button className={styles.closeButton} onClick={() => setMenuOpen(false)}>
+                <MdClose size={40} />
+              </button>
+              <ul className={styles.menuLinks}>
+                <li><NavLink to="/" onClick={() => setMenuOpen(false)}>Strona główna</NavLink></li>
+                <li><NavLink to="/onas" onClick={() => setMenuOpen(false)}>O nas</NavLink></li>
+                <li><NavLink to="/oferta" onClick={() => setMenuOpen(false)}>Oferta</NavLink></li>
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </motion.div>
   );

@@ -102,12 +102,21 @@
 .navLinks li:hover {
   color: #0056b3;
 }
+.navLinks a {
+  text-decoration: none;
+  color:rgba(68,167,184,255);
+}
+.navLinks a:hover{
+  color: #0056b3;
+  transition: color 0.3s ease-in-out;
+}
 
 .menuButton {
   background: none;
   border: none;
   cursor: pointer;
   display: none;
+  color:rgba(68,167,184,255);
 }
 
 @media (max-width: 768px) {
@@ -129,6 +138,7 @@
     justify-content: center;
     gap: 10px;
     text-align: center;
+    margin-left:30px;
   }
 
   .navLinks {
@@ -147,4 +157,45 @@
   .navLinks.open {
     display: flex;
   }
+}
+.fullscreenMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #44a7b8c8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.closeButton {
+  position: absolute;
+  top: 30px;
+  right: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.menuLinks {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.menuLinks li {
+  margin: 20px 0;
+}
+
+.menuLinks a {
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  transition: color 0.3s;
 }

@@ -257,10 +257,10 @@ const ProductPage = () => {
             </>
           )}
           {product.title !== "Gadżety reklamowe" && product.title !== "Odzież reklamowa" && (
-            <>
-              <p className={styles.price}><br/>Cena netto: <strong>{selectedPriceNet.toFixed(2)} zł</strong></p>
-              <p className={styles.price}>Cena brutto: <strong>{calculateBrutto(selectedPriceNet)} zł</strong></p>
-            </>
+          <div className={styles.priceContainer}>
+            <p className={styles.price}>Cena netto: <strong>{selectedPriceNet.toFixed(2)} zł</strong></p>
+            <p className={styles.price}>Cena brutto: <strong>{calculateBrutto(selectedPriceNet)} zł</strong></p>
+          </div>
           )}
         </div>
       </div>

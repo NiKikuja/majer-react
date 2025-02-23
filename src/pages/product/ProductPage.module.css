@@ -64,7 +64,7 @@
 .price {
     font-size: 22px;
     font-weight: bold;
-    color: #007bff;
+    color: white;
 }
 
 .input, select {
@@ -226,4 +226,12 @@ select:focus {
     box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.4);
     outline: none;
     background-color: white;
+}
+.priceContainer {
+    background-color: #44a7b8;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
 }
